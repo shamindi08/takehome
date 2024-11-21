@@ -1,10 +1,9 @@
-This is a React and Next.js project styled with TailwindCSS. The project includes a login page, a profile page, and supports responsive design using a clean and intuitive UI.
+This is a React and Next.ts project styled with TailwindCSS. The project includes a login page, a profile page, and supports responsive design using a clean and intuitive UI.
 
 Features
 
     -Responsive UI designed with TailwindCSS
     -Authentication with JWT tokens
-    -Dynamic pagination with FontAwesome icons
     -Clean and reusable component structure
     -Fully mobile and desktop-friendly design
 

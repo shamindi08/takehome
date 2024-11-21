@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(to right, #ffecd2, #fcb69f);
+  --foreground: #fef6e4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(to right, #d1c4e9, #b39ddb);
+    --foreground: #af9999;
   }
 }
 
@@ -18,4 +18,110 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+.heading {
+  @apply text-4xl font-bold text-center mb-6 text-gray-900;
+}
+
+.profile-card {
+  @apply bg-[#f1eeee] shadow-lg rounded-lg p-6 mb-6;
+}
+
+.user-card {
+  @apply bg-white shadow-sm rounded-lg p-6 mb-4;
+}
+
+.error-message {
+  @apply text-red-600 text-center font-medium mt-4;
+}
+
+.loading-animation {
+  @apply flex justify-center items-center mt-6;
+}
+
+.spinner {
+  @apply w-8 h-8 border-4 border-t-transparent border-blue-500 rounded-full animate-spin;
+}
+
+.loading {
+  @apply ml-4 text-gray-600 font-medium;
+}
+
+.pagination {
+  @apply flex justify-center gap-4 mt-7;
+}
+
+.button-action {
+  @apply px-8 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.button-action:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+.heading {
+  @apply text-2xl font-bold text-gray-900 mb-4;
+}
+
+.form-container {
+  @apply bg-white p-6 rounded-lg shadow-lg w-80 mx-auto;
+}
+
+.input-field {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.label {
+  @apply block text-gray-700 mb-2;
+}
+
+.button-login {
+  @apply w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.button-login:disabled {
+  @apply bg-blue-400 cursor-not-allowed opacity-75;
+}
+
+
+
+@media (min-width: 768px) {
+  .heading {
+    @apply text-4xl;
+  }
+
+  .profile-card {
+    @apply p-8;
+  }
+
+  .user-card {
+    @apply p-8;
+  }
+
+  .button-action {
+    @apply px-6 py-3 text-lg;
+  }
+
+  .button-logout {
+    @apply px-6 py-3 text-lg;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .heading {
+    @apply text-2xl;
+  }
+
+  .profile-card {
+    @apply p-4;
+  }
+
+  .user-card {
+    @apply p-4;
+  }
+
+  .pagination {
+    @apply flex-col gap-2;
+  }
 }
